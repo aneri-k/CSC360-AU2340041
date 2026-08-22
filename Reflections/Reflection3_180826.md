@@ -1,6 +1,5 @@
 # Class Reflection (18 August 2026)
 
----
 
 ## Topics
 
@@ -11,11 +10,8 @@
 * Drawing a square using coordinates
 * Setting default values for graphical inputs
 
----
-
 ## Notes
 
----
 
 ### Topic 1: Maven and Project Structure
 
