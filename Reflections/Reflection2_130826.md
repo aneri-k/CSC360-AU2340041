@@ -1,57 +1,36 @@
-# Class Reflection (13 August 2026)
+# Class Reflection
 
----
 
 ## Topics
 
 * Maven and Java project management
-* Maven project and folder structure
-* pom.xml and project dependencies
+* Maven project structure and pom.xml
 * Maven build commands
-* Drawing a square using coordinates
-* Setting default values for graphical inputs
+* Java Swing
+* Graphics and Graphics2D
+* Drawing and positioning a square
+* BasicStroke
+* Troubleshooting Maven and project files
 
----
+
 
 ## Notes
 
----
 
-### Topic 1: Maven and Project Structure
+### Topic 1
 
-The lecture introduced Maven and its importance in managing Java projects. Maven provides a standard structure for organizing Java projects, which makes it easier to manage source files, dependencies, and build-related files. One of the main files in a Maven project is the pom.xml file. It contains important information about the project, such as its name, version, dependencies, and build configuration.
+The lecture introduced Maven and its role in managing Java projects. Maven provides a standard structure for organizing a Java project, which makes it easier to manage source files, dependencies, and other project-related files. The pom.xml file is an important part of a Maven project because it contains the project configuration and information about its dependencies.
 
-A basic Maven project was created during the practical part of the lecture. The folder structure helped demonstrate how Maven separates the source code and other project-related files. Understanding this structure is important because Maven commands depend on the project being organized correctly.
+A basic Maven project was created during the practical work. The mvn clean package command was also used to build the project. An important point I learned was that Maven commands need to be executed from the correct project directory containing the pom.xml file. Running the command from the wrong directory can cause errors because Maven cannot identify the project.
 
-A useful command introduced during the lecture was mvn clean package. This command can be used to clean previous build files and package the project after compiling and testing it. An important practical point was that Maven commands need to be executed from the correct project directory, specifically the directory containing the pom.xml file. Running the command from another folder can result in errors because Maven cannot find the project configuration.
+### Topic 2
 
----
+The lecture also covered Java Swing and the use of the Graphics and Graphics2D classes for creating graphical applications. A simple window was created that displayed a hollow square. Through this exercise, I learned how to control different properties of the square, including its position, size, color, and line thickness.
 
-### Topic 2: Drawing a Square Using Coordinates
+The BasicStroke class was used to increase the thickness of the square's outline. I also learned how calculating the square's coordinates based on the dimensions of the window allows it to remain centered. This helped me understand how coordinate calculations can be used to position graphical objects accurately.
 
-The lecture also focused on the basic concepts involved in drawing a square on a graphical canvas. Before drawing the square, we need to give some inputs. The main inputs are the length of one side of the square and the square's position on the canvas.
+### Reflection
 
-Default values can also be provided. For example, the square's centre can be set to the canvas centre by default. This makes the application easier to use and reduces unnecessary user input.
+During the practical work, I faced some issues such as running Maven from the wrong directory and trying to rename a folder while it was still being used by another process. Resolving these problems helped me understand that working with a development environment requires attention to both the code and the project setup.
 
-To draw the square, the coordinates of its four corners need to be calculated. If `(C_x, C_y)` represents the centre of the square and `l` represents the side length, the upper-left corner can be calculated using:
-
-`(C_x - l/2, C_y - l/2)`
-
-The remaining three corners can then be calculated from the upper-left corner:
-
-* **Lower-left:** `(C_x - l/2, C_y + l/2)`
-* **Upper-right:** `(C_x + l/2, C_y - l/2)`
-* **Lower-right:** `(C_x + l/2, C_y + l/2)`
-
-This approach showed how mathematical calculations and coordinate geometry are directly connected to computer graphics. By calculating the coordinates from the centre and side length, the square can remain properly positioned even when the canvas dimensions change.
-
----
-
-### Topic 3: Controlling the Appearance of the Square
-
-The square created during the practical work was not only positioned using coordinates but also modified in appearance. Properties such as colour, size, and line thickness can be controlled through the graphics classes.
-
-BasicStroke can be used to control the thickness of a shape's outline. Increasing the stroke width makes the square's border appear thicker. 
-
-Calculating the square's position based on the window's dimensions also made the application more flexible. Instead of using fixed coordinates, the square could be positioned relative to the centre of the canvas.
-
+Overall, the lecture gave me a better understanding of Maven, Java project organization, and basic graphical programming. The practical exercise of creating and modifying a square also helped me connect programming concepts with coordinate geometry and graphical output. The troubleshooting experience was useful as it improved my understanding of common problems that can occur while working with Java projects and command-line tools.
